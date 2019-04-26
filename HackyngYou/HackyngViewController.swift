@@ -17,6 +17,7 @@ class HackyngViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        hackImage.loadGif(name: "tenor")
         // Do any additional setup after loading the view.
     }
     

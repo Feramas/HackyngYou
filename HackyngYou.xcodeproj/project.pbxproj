@@ -15,6 +15,8 @@
 		0B189C9922707D7300A7DC6B /* HackyngYouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B189C9822707D7300A7DC6B /* HackyngYouTests.swift */; };
 		0B189CA422707D7300A7DC6B /* HackyngYouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B189CA322707D7300A7DC6B /* HackyngYouUITests.swift */; };
 		0B189CB222707E7D00A7DC6B /* HackyngViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B189CB122707E7D00A7DC6B /* HackyngViewController.swift */; };
+		0BC763E02273873500541923 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC763DF2273873500541923 /* Swift+Gif.swift */; };
+		0BC763E22273885D00541923 /* tenor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0BC763E12273885D00541923 /* tenor.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0B189CA322707D7300A7DC6B /* HackyngYouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackyngYouUITests.swift; sourceTree = "<group>"; };
 		0B189CA522707D7300A7DC6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B189CB122707E7D00A7DC6B /* HackyngViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackyngViewController.swift; sourceTree = "<group>"; };
+		0BC763DF2273873500541923 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		0BC763E12273885D00541923 /* tenor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenor.gif; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,9 @@
 				0B189C8322707D7100A7DC6B /* AppDelegate.swift */,
 				0B189C8522707D7100A7DC6B /* ViewController.swift */,
 				0B189CB122707E7D00A7DC6B /* HackyngViewController.swift */,
+				0BC763DF2273873500541923 /* Swift+Gif.swift */,
 				0B189C8722707D7100A7DC6B /* Main.storyboard */,
+				0BC763E12273885D00541923 /* tenor.gif */,
 				0B189C8A22707D7300A7DC6B /* Assets.xcassets */,
 				0B189C8C22707D7300A7DC6B /* LaunchScreen.storyboard */,
 				0B189C8F22707D7300A7DC6B /* Info.plist */,
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B189C8E22707D7300A7DC6B /* LaunchScreen.storyboard in Resources */,
+				0BC763E22273885D00541923 /* tenor.gif in Resources */,
 				0B189C8B22707D7300A7DC6B /* Assets.xcassets in Resources */,
 				0B189C8922707D7100A7DC6B /* Main.storyboard in Resources */,
 			);
@@ -259,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BC763E02273873500541923 /* Swift+Gif.swift in Sources */,
 				0B189C8622707D7100A7DC6B /* ViewController.swift in Sources */,
 				0B189CB222707E7D00A7DC6B /* HackyngViewController.swift in Sources */,
 				0B189C8422707D7100A7DC6B /* AppDelegate.swift in Sources */,

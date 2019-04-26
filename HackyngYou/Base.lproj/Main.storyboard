@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hack" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acess" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
                                 <rect key="frame" x="16" y="334" width="343" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -94,6 +94,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hack" width="318" height="159"/>
+        <image name="acess" width="1920" height="1080"/>
     </resources>
 </document>
