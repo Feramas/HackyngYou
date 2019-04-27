@@ -18,29 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="acess" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acess" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
                                 <rect key="frame" x="16" y="334" width="343" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="RdC-Re-PZU"/>
+                                    <constraint firstAttribute="width" constant="343" id="fs4-8e-WdF"/>
+                                </constraints>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-Ec-KBf">
-                                <rect key="frame" x="62" y="287" width="263" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-Ec-KBf">
+                                <rect key="frame" x="62" y="287" width="263" height="10"/>
                                 <color key="tintColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="UhJ-Eh-TuZ"/>
+                                    <constraint firstAttribute="width" constant="263" id="yOE-Oh-U7e"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="trackTintColor" red="0.58039215690000001" green="0.74117647060000003" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="127.0.0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh0-oX-ODN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127.0.0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh0-oX-ODN">
                                 <rect key="frame" x="16" y="50" width="343" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="AeP-E3-Itn"/>
+                                    <constraint firstAttribute="width" constant="343" id="QCl-Ya-BXI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="35"/>
                                 <color key="textColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Obe-fV-eQW" firstAttribute="trailing" secondItem="jh0-oX-ODN" secondAttribute="trailing" constant="16" id="He5-B0-wwK"/>
+                            <constraint firstItem="Obe-fV-eQW" firstAttribute="bottom" secondItem="WJN-X1-oQU" secondAttribute="bottom" constant="20" id="IHz-Ch-J1e"/>
+                            <constraint firstItem="WJN-X1-oQU" firstAttribute="top" secondItem="Q9u-Ec-KBf" secondAttribute="bottom" constant="37" id="Nyg-w0-9tC"/>
+                            <constraint firstItem="WJN-X1-oQU" firstAttribute="leading" secondItem="Obe-fV-eQW" secondAttribute="leading" constant="16" id="R6W-it-vJX"/>
+                            <constraint firstItem="Q9u-Ec-KBf" firstAttribute="top" secondItem="jh0-oX-ODN" secondAttribute="bottom" constant="35" id="SfY-Up-g6C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q9u-Ec-KBf" secondAttribute="trailing" constant="34" id="U0Y-MF-4v1"/>
+                            <constraint firstItem="Q9u-Ec-KBf" firstAttribute="leading" secondItem="fTa-mJ-vub" secondAttribute="leadingMargin" constant="46" id="US0-kC-acV"/>
+                            <constraint firstItem="jh0-oX-ODN" firstAttribute="leading" secondItem="Obe-fV-eQW" secondAttribute="leading" constant="16" id="fuz-89-C7l"/>
+                            <constraint firstItem="jh0-oX-ODN" firstAttribute="top" secondItem="Obe-fV-eQW" secondAttribute="top" constant="30" id="rhJ-k9-m1c"/>
+                            <constraint firstItem="Obe-fV-eQW" firstAttribute="trailing" secondItem="WJN-X1-oQU" secondAttribute="trailing" constant="16" id="yc7-3e-JAz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Obe-fV-eQW"/>
                     </view>
                     <connections>
                         <outlet property="hackImage" destination="WJN-X1-oQU" id="GnU-6C-3fZ"/>
                         <outlet property="progressHack" destination="fTa-mJ-vub" id="SvY-YX-6kY"/>
+                        <outlet property="progressView" destination="Q9u-Ec-KBf" id="XK1-9T-0t7"/>
                         <outlet property="resultHack" destination="jh0-oX-ODN" id="dUL-RB-ZRC"/>
                     </connections>
                 </viewController>

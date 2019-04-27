@@ -10,15 +10,37 @@ import UIKit
 
 class HackyngViewController: UIViewController {
 
-    @IBOutlet var progressHack: UIView!
     @IBOutlet weak var hackImage: UIImageView!
     @IBOutlet weak var resultHack: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    
+    var isRunning = false
+    var progressBarTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        progressView.progress = 0.0
         hackImage.loadGif(name: "tenor")
-        // Do any additional setup after loading the view.
+    }
+    
+    func progressBarWorking(){
+        if(isRunning){
+            progressBarTimer.invalidate()
+        }else{
+            progressView.progress = 0.0
+            self.progressBarTimer = Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(HackyngViewController.updateProgressView), userInfo: nil, repeats: true)
+            isRunning = !isRunning
+        }
+    }
+    
+    @objc func updateProgressView(){
+        progressView.progress += 0.1
+        progressView.setProgress(progressView.progress, animated: true)
+        if(progressView.progress == 1.0)
+        {
+            progressBarTimer.invalidate()
+            isRunning = false
+        }
     }
     
 }
