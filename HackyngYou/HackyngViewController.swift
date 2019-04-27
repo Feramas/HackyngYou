@@ -20,6 +20,10 @@ class HackyngViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView.progress = 0.0
+        progressView.layer.cornerRadius = 10
+        progressView.clipsToBounds = true
+        progressView.layer.sublayers![1].cornerRadius = 10
+        progressView.subviews[1].clipsToBounds = true
         hackImage.loadGif(name: "tenor")
     }
     
@@ -28,9 +32,9 @@ class HackyngViewController: UIViewController {
             progressBarTimer.invalidate()
         }else{
             progressView.progress = 0.0
-            self.progressBarTimer = Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(HackyngViewController.updateProgressView), userInfo: nil, repeats: true)
-            isRunning = !isRunning
+            self.progressBarTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(HackyngViewController.updateProgressView), userInfo: nil, repeats: true)
         }
+        isRunning = !isRunning
     }
     
     @objc func updateProgressView(){
