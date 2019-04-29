@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MEf-c4-Pmm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acess" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
-                                <rect key="frame" x="16" y="334" width="343" height="313"/>
+                                <rect key="frame" x="16" y="378" width="343" height="1080"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="313" id="RdC-Re-PZU"/>
                                     <constraint firstAttribute="width" constant="343" id="fs4-8e-WdF"/>
                                 </constraints>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="Q9u-Ec-KBf">
-                                <rect key="frame" x="62" y="287" width="263" height="10"/>
+                                <rect key="frame" x="62" y="331" width="263" height="10"/>
                                 <color key="tintColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="UhJ-Eh-TuZ"/>
@@ -36,7 +36,7 @@
                                 <color key="trackTintColor" red="0.58039215690000001" green="0.74117647060000003" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127.0.0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh0-oX-ODN">
-                                <rect key="frame" x="16" y="50" width="343" height="202"/>
+                                <rect key="frame" x="16" y="94" width="343" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="AeP-E3-Itn"/>
                                     <constraint firstAttribute="width" constant="343" id="QCl-Ya-BXI"/>
@@ -70,9 +70,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EE-IE-9Ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.799999999999997" y="-526.6866566716642"/>
+            <point key="canvasLocation" x="1028" y="-526.6866566716642"/>
         </scene>
-        <!--View Controller-->
+        <!--Hackyng You-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackyngYou" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,6 +87,8 @@
                                     <color key="titleColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="hackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zA3-Xk-BSB"/>
+                                    <action selector="hackyngBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5T-Fc-mOX"/>
                                     <segue destination="chf-t2-07B" kind="show" identifier="hackyng" id="O1t-H6-vs0"/>
                                 </connections>
                             </button>
@@ -108,11 +110,31 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Hackyng You" id="qy8-Tw-1F1"/>
                     <connections>
+                        <outlet property="hackBtn" destination="rPS-uj-CW3" id="Qg8-VA-CR9"/>
                         <outlet property="hackText" destination="Jmx-fK-F6E" id="bOa-Lx-g2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-525.78710644677665"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zay-3P-wou">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MEf-c4-Pmm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NVR-gd-Zgc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eP0-9M-c6C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSz-w5-gS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-807.20000000000005" y="-525.78710644677665"/>
         </scene>

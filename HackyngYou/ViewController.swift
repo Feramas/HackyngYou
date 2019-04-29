@@ -12,6 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var hackText: UITextField!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "hackyng"{
+            
+            let destinyView = segue.destination as! HackyngViewController
+            destinyView.resultHackReceived = hackText.text!
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

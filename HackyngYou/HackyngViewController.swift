@@ -14,11 +14,16 @@ class HackyngViewController: UIViewController {
     @IBOutlet weak var resultHack: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
+    var resultHackReceived:String = "127.0.0.1"
+    
     var isRunning = false
     var progressBarTimer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultHack.text = resultHackReceived
+        
         progressView.progress = 0.0
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
