@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acess" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-X1-oQU">
-                                <rect key="frame" x="16" y="378" width="343" height="1080"/>
+                                <rect key="frame" x="16" y="378" width="343" height="269"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="313" id="RdC-Re-PZU"/>
                                     <constraint firstAttribute="width" constant="343" id="fs4-8e-WdF"/>
@@ -63,7 +63,6 @@
                     </view>
                     <connections>
                         <outlet property="hackImage" destination="WJN-X1-oQU" id="GnU-6C-3fZ"/>
-                        <outlet property="progressHack" destination="fTa-mJ-vub" id="SvY-YX-6kY"/>
                         <outlet property="progressView" destination="Q9u-Ec-KBf" id="XK1-9T-0t7"/>
                         <outlet property="resultHack" destination="jh0-oX-ODN" id="dUL-RB-ZRC"/>
                     </connections>
@@ -87,12 +86,10 @@
                                     <color key="titleColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="hackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zA3-Xk-BSB"/>
-                                    <action selector="hackyngBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5T-Fc-mOX"/>
                                     <segue destination="chf-t2-07B" kind="show" identifier="hackyng" id="O1t-H6-vs0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jmx-fK-F6E">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone Number" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Jmx-fK-F6E">
                                 <rect key="frame" x="101" y="318" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1318268021" green="0.44757503389999997" blue="0.0071618008480000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -112,7 +109,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hackyng You" id="qy8-Tw-1F1"/>
                     <connections>
-                        <outlet property="hackBtn" destination="rPS-uj-CW3" id="Qg8-VA-CR9"/>
                         <outlet property="hackText" destination="Jmx-fK-F6E" id="bOa-Lx-g2g"/>
                     </connections>
                 </viewController>

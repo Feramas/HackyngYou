@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var hackText: UITextField!
+    
+    let maxCharCount = 11
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "hackyng"{
@@ -20,19 +22,17 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
-    func mixNumbers() -> Int{
-        if let hackNumber = Int(hackText.text!) {
-            return hackNumber
-        }else{
-            return 0
-        }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return textField.text!.characters.count + string.characters.count <= self.maxCharCount
     }
-
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hackText.delegate = self
+        // Do any additional setup after loading the view, typically from a nib.
+    }
 }
 

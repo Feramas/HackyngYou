@@ -22,14 +22,15 @@ class HackyngViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        resultHack.text = resultHackReceived
-        
+        resultHack.text = mixResult(length: 16)
+        progressBarWorking()
         progressView.progress = 0.0
-        progressView.layer.cornerRadius = 10
+        progressView.layer.cornerRadius = 5
         progressView.clipsToBounds = true
-        progressView.layer.sublayers![1].cornerRadius = 10
+        progressView.layer.sublayers![1].cornerRadius = 5
         progressView.subviews[1].clipsToBounds = true
         hackImage.loadGif(name: "tenor")
+        updateProgressView()
     }
     
     func progressBarWorking(){
@@ -37,7 +38,7 @@ class HackyngViewController: UIViewController {
             progressBarTimer.invalidate()
         }else{
             progressView.progress = 0.0
-            self.progressBarTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(HackyngViewController.updateProgressView), userInfo: nil, repeats: true)
+            self.progressBarTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(HackyngViewController.updateProgressView), userInfo: nil, repeats: true)
         }
         isRunning = !isRunning
     }
@@ -52,4 +53,13 @@ class HackyngViewController: UIViewController {
         }
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+    
+    func mixResult(length: Int) -> String{
+        let randowResult =  resultHackReceived
+        return String("#" + (0..<length).map{ _ in randowResult.randomElement()!})
+    }
+
 }
